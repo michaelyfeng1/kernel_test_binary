@@ -1,0 +1,19 @@
+
+testbench.o:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000f80200000 <__start>:
+   f80200000:	fe010113          	addi	sp,sp,-32
+   f80200004:	00813c23          	sd	s0,24(sp)
+   f80200008:	02010413          	addi	s0,sp,32
+   f8020000c:	802637b7          	lui	a5,0x80263
+   f80200010:	03078793          	addi	a5,a5,48 # ffffffff80263030 <__KernelEndAddr+0xfffffff000062030>
+   f80200014:	fef43423          	sd	a5,-24(s0)
+   f80200018:	fe843783          	ld	a5,-24(s0)
+   f8020001c:	37ab7737          	lui	a4,0x37ab7
+   f80200020:	00271713          	slli	a4,a4,0x2
+   f80200024:	eff70713          	addi	a4,a4,-257 # 37ab6eff <__start-0xf48749101>
+   f80200028:	00e7b023          	sd	a4,0(a5)
+   f8020002c:	fedff06f          	j	f80200018 <__start+0x18>
