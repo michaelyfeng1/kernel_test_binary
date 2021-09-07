@@ -54,7 +54,7 @@ typedef struct Trapframe {
     uint64_t sScaues;
 }__attribute__((packed, aligned(8))) Trapframe_t;
 
-
+void fnBuildIntrVetTbl();
 void fnDispatchInterrupt(Trapframe_t* _tf);
 void fnDispatchSoftInterrupt(Trapframe_t* _tf);
 void fnDispatchExtrInterrupt(Trapframe_t* _tf);
@@ -62,6 +62,6 @@ void fnDispatchExtrInterrupt(Trapframe_t* _tf);
 void fnTrapInit();
 uint8_t fnTrapTypeParse(uint64_t _sscauseValue);
 
-void fnInterruptTest();
+// void fnInterruptTest();
 
 #endif
